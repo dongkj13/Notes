@@ -24,7 +24,7 @@ def Softplus(x):
 
 def Softsign(x):
     return x / (1.0 + abs(x))
-    
+
 ##################################################################
 # activation derivative
 def Sigmoid_deriv(x):
@@ -43,7 +43,7 @@ def Elu_deriv(x, alpha=1.0):
     return np.array([1 if xx > 0 else alpha*exp(xx) for xx in x])
 
 def Softplus_deriv(x):
-    return exp(x) / (1.0 + exp(x))
+    return 1.0 / (1.0 + exp(-x))
 
 def Softsign_deriv(x):
     return 1.0 / (1 + abs(x))**2
