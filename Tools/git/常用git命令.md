@@ -1,3 +1,12 @@
+## 常见的git命令及用法
+
+![git_command](.\..\..\Image\git_command\git_command.png)
+
+- Workspace：工作区
+- Index / Stage：暂存区
+- Repository：仓库区（或本地仓库）
+- Remote：远程仓库
+
 ## 新建代码库
 
 ```bash
@@ -84,7 +93,7 @@ $ git diff --shortstat '@{1 day ago}'
 
 TODO
 
-## [撤销](./git reset.md)
+## 撤销
 
 ```bash
 # 恢复暂存区的指定文件到工作区
@@ -96,10 +105,38 @@ $ git checkout [commit] [file]
 # 恢复暂存区的所有文件到工作区
 $ git checkout .
 
+# 回退到某个版本的Staged状态，可以修改提交信息再次提交
+$ git reset --soft head^/commit-id
+
+# 回退到某个版本的Modified状态，可以修改需要提交的文件并再次提交
+$ git reset --mixed head^/commit-id
+
+# 彻底回退到某个版本，本地的源码也会变为上一个版本的内容（所有的修改都会被丢弃）
+$ git reset --hard head^/commmit-id
+
 # 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
 ```
+
+## 清空工作区
+
+```bash
+# 是一次clean的演习，告诉你哪些文件会被删除。记住他不会真正的删除文件，只是一个提醒
+$ git clean -n
+
+# 删除当前目录下所有没有track过的文件。不会删除.gitignore文件里面指定的文件夹和文件，不管这些文件有没有被track过
+$ git clean -f [<path>]
+
+# 删除当前目录下没有被track过的文件和文件夹
+$ git clean -df
+
+# 删除当前目录下所有没有track过的文件。不管他是否是.gitignore文件里面指定的文件夹和文件
+$ git clean -xf
+```
+
+- `git reset --hard`和`git clean -f`是一对好基友。结合使用他们能让你的工作目录完全回退到最近一次commit的时候。
+- `git clean`对于刚编译过的项目也非常有用。它能轻易删除掉编译后生成的.o和.exe等文件。这个在打包要发布一个release的时候非常有用。
 
 ## 参考
 

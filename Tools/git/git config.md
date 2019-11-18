@@ -40,7 +40,6 @@ $ git config [--local|--global|--system] --unset section.key
 
 ## 常用配置项
 ```git
-//简写
 [alias]
 	st = status
     ci = commit 
