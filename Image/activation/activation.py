@@ -11,13 +11,13 @@ def Tanh(x):
     return (exp(x) - exp(-x)) / (exp(x) + exp(-x))
 
 def Relu(x):
-    return np.array([0 if xx<0 else xx for xx in x])
+    return np.where(x > 0, x, 0)
 
 def Leaky_Relu(x, alpha=0.1):
-    return np.array([alpha*xx if xx<0 else xx for xx in x])
+    return np.where(x > 0, x, x * alpha)
 
 def Elu(x, alpha=1.0):
-    return np.array([alpha*(exp(xx)-1) if xx<0 else xx for xx in x])
+    return np.where(x > 0, x, alpha*(exp(x)-1))
 
 def Softplus(x):
     return log(1 + exp(x))
@@ -34,13 +34,13 @@ def Tanh_deriv(x):
     return 1.0 - Tanh(x) * Tanh(x)
 
 def Relu_deriv(x):
-    return np.array([1 if xx > 0 else 0 for xx in x])
+    return np.where(x > 0, 1, 0)
 
 def Leaky_Relu_deriv(x, alpha=0.1):
-    return np.array([1 if xx > 0 else alpha for xx in x])
+    return np.where(x > 0, 1, alpha)
 
 def Elu_deriv(x, alpha=1.0):
-    return np.array([1 if xx > 0 else alpha*exp(xx) for xx in x])
+    return np.where(x > 0, 1, alpha*exp(x))
 
 def Softplus_deriv(x):
     return 1.0 / (1.0 + exp(-x))
