@@ -1,6 +1,8 @@
 ## 常见的git命令及用法
 
-![git_command](.\..\..\Image\git_command\git_command.png)
+<p align="center">
+  <img src=".\..\..\Image\git_command\git_command.png">
+</p>
 
 - Workspace：工作区
 - Index / Stage：暂存区
@@ -17,7 +19,7 @@ $ git init
 $ git init --bare
 ```
 
-## [配置](./git config.md)
+## [配置](./config.md)
 
 ## 增加/删除文件
 
@@ -67,7 +69,7 @@ $ git commit --amend --no-edit
 
 TODO
 
-## [标签](./git tag.md)
+## [标签](./tag.md)
 
 ## 查看信息
 
