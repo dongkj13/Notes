@@ -67,7 +67,20 @@ $ git commit --amend --no-edit
 
 ## 分支
 
-TODO
+```bash
+# 创建分支
+$ git branch [branch_name]
+# 切换分支
+$ git checkout [branch_name]
+# 快速创建并切换分支
+$ git checkout -b [branch_name]
+# 查看本地/远程分支
+$ git branch [-r]
+# 删除分支
+$ git branch -d [branch_name]
+# 合并分支，在主分支指定要合并进来的分支
+$ git merge [branch_name]
+```
 
 ## [标签](./tag.md)
 
