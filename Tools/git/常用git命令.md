@@ -19,6 +19,19 @@ $ git init
 $ git init --bare
 ```
 
+## 克隆代码库
+
+```bash
+# 获取全部分支内容，整体下载时间较长 & 所占磁盘空间较大
+$ git clone <repository> [<directory>]
+
+# 获取指定分支的代码
+$ git clone <repository> [--branch/-b] [branch_name]
+
+# 获取最近xx（10条提交记录的）代码，默认是master分支
+$ git clone <repository> [--depth 10]
+```
+
 ## [配置](./config.md)
 
 ## 增加/删除文件
@@ -70,14 +83,21 @@ $ git commit --amend --no-edit
 ```bash
 # 创建分支
 $ git branch [branch_name]
+
 # 切换分支
 $ git checkout [branch_name]
+
 # 快速创建并切换分支
 $ git checkout -b [branch_name]
+
 # 查看本地/远程分支
-$ git branch [-r]
+$ git branch
+$ git branch [-r] [--remote]
+$ git branch [-a] [--all]
+
 # 删除分支
 $ git branch -d [branch_name]
+
 # 合并分支，在主分支指定要合并进来的分支
 $ git merge [branch_name]
 ```
