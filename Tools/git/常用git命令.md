@@ -180,3 +180,6 @@ $ git clean -xf
 - [git-简易指南](http://www.bootcss.com/p/git-guide/)
 - [Pro git](http://iissnan.com/progit/)
 - [windows下实现Git在局域网使用](https://www.cnblogs.com/hujunzheng/p/4970411.html)
+- [工作流一目了然，看小姐姐用动图展示10大Git命令](https://zhuanlan.zhihu.com/p/132573100)
+- [Learn Git Branching](https://learngitbranching.js.org)
+
