@@ -20,9 +20,16 @@ a.push_back(5);                 //在a的最后一个向量后插入一个元素
 a.insert(a.begin()+1,5);        //在a的第1个元素（从第0个算起）的位置插入数值5，如a为1,2,3,4，插入元素后为1,5,2,3,4
 a.insert(a.begin()+1,3,5);      //在a的第1个元素（从第0个算起）的位置插入3个数，其值都为5
 a.insert(a.begin()+1,b+3,b+6);  //b为数组，在a的第1个元素（从第0个算起）的位置插入b的第3个元素到第5个元素（不包括b+6），如b为1,2,3,4,5,9,8，插入元素后为1,4,5,9,2,3,4,5,9,8
+
+//C++11引入的新成员，一般用于直接插入结构体的元素
+a.emplace_back(arg1, arg2, ...);//在a的最后后插入一个元素（一般结构体），直接将参数转发到构造函数
+a.emplace(a.begin()+1, arg1, arg2, ...);//在a的第一个元素后插入结构体
 ```
 
+[c++11 emplace_back特性](https://zh.cppreference.com/w/cpp/container/vector/emplace_back)
+
 ### 删除函数
+
 ```c++
 a.clear();                          //清空a中的元素
 a.pop_back();                       //删除a向量的最后一个元素
@@ -69,3 +76,4 @@ int minPosition = min_element(v.begin(),v.end()) - v.begin();
 vector<int> v={1,2,3,4,5};
 reverse(v.begin(), v.end());    //v的值为5，4，3，2，1
 ```
+
