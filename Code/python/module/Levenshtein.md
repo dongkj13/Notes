@@ -24,8 +24,8 @@ Levenshtein.hamming('abc', 'cam')		# 结果为3
 也称Levenshtein距离，是描述由一个字串转化成另一个字串最少的操作次数，在其中的操作包括插入、删除、替换。算法实现：动态规划，可参考[编辑距离算法实现](https://blog.csdn.net/asty9000/article/details/81384650)。
 
 ```python
-Levenshtein.hamming('abc', 'ac')		# 结果为1，插入一次
-Levenshtein.hamming('kitten', 'sitting')		# 结果为3，k替换成s，e替换成i，插入g
+Levenshtein.distance('abc', 'ac')		# 结果为1，插入一次
+Levenshtein.distance('kitten', 'sitting')		# 结果为3，k替换成s，e替换成i，插入g
 ```
 
 ### 莱文斯坦比
