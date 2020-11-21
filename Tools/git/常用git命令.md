@@ -152,6 +152,8 @@ $ git reset --hard head^/commmit-id
 # 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
+$ git stash list
+$ git stash push -m "commit message" file1 file2 file3
 ```
 
 ## 清空工作区
