@@ -4,6 +4,7 @@
 unordered_map<int, int> map1;
 unordered_map<string, int> map2;
 unordered_map<int, unordered_map<int, int>> map3;   //相当于二维数组
+unordered_map<int, int> map4 = {{1, 2}, {3, 4}};		//初始化
 ```
 
 ## 成员函数

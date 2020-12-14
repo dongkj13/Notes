@@ -1,7 +1,8 @@
 ## 定义
 ```c++
 #include <unordered_set> 
-unordered_set<int> s    //定义一个set容器 类型为int型
+unordered_set<int> set1;    //定义一个set容器 类型为int型
+unordered_set<int> set2 = {1, 2, 3};	//初始化
 ```
 ## 基本函数
 | 函数       | 描述                                          |
