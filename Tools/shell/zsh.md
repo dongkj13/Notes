@@ -68,9 +68,29 @@ ${git_info}\
 
 #### autojump
 
+```shell
+git clone git://github.com/joelthelion/autojump.git $ZSH_CUSTOM/plugins/autojump
+cd $ZSH_CUSTOM/plugins/autojump
+./install.py
+vim ~/.zshrc
+# 在文件里找到plugins，添加
+plugins=(autojump)
+# 在文件末尾添加
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+source ~/.zshrc
+```
+
 #### zsh-autosuggestion
 
+```shell
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
 #### zsh-syntax-highlighting
+
+```shell
+git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
 
 ## 参考
 
